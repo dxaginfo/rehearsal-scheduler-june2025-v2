@@ -1,0 +1,49 @@
+{
+  "name": "rehearsal-scheduler-server",
+  "version": "1.0.0",
+  "description": "Backend server for the Rehearsal Scheduler application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --runInBand",
+    "lint": "eslint .",
+    "db:create": "node src/scripts/createDatabase.js",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:seed": "sequelize-cli db:seed:all"
+  },
+  "keywords": [
+    "rehearsal",
+    "scheduler",
+    "music",
+    "band",
+    "express",
+    "nodejs"
+  ],
+  "author": "DX AG",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "helmet": "^5.1.1",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "redis": "^4.2.0",
+    "sequelize": "^6.21.3",
+    "socket.io": "^4.5.1",
+    "uuid": "^8.3.2",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19",
+    "sequelize-cli": "^6.4.1",
+    "supertest": "^6.2.4"
+  }
+}
